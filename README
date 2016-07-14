@@ -1,0 +1,22 @@
+Branch Predictor 
+----------------------------------------------------------------------
+Description: 
+
+Branch predictor that combines the cooncepts of perceptron prediction and path based neural prediction. Preceptron based predictor used only the pattern history information and cannot learn lineraly inseparable functions. Piecewise linear branch predictor works by learning a set of linear functions for each branch. This allows the predictor to learn linearly inseparable functions. The path based neural predictor improves accuracy by finding correlations with path history as well as pattern history.
+
+References:
+
+[1]. Piecewise linear branch predictor - Jimenez-2005
+
+
+
+Instructions:
+
+
+1) Run the predictor
+(bunzip2 -c -k ../traces/DIST-INT-1.bz2 | ./predictor)
+where DIST-INT-1.bz is one of the trace files.
+./predictor reads (in a binary format) from STDIN a trace
+(decompressed with bzip2 on the fly). It outputs to STDOUT basic
+statistics about how well the predictor did.
+
